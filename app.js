@@ -15,9 +15,15 @@ const loader = document.querySelector("#loader");
 
 document.addEventListener("DOMContentLoaded", (event) => {
   alert('hello');
-  getForecastData();
+//   getForecastData();
+  dummycall();
 });
 
+function dummycall(){
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(res => res.json())
+  .then(res => console.log(res));
+}
 function getForecastData() {
   // Get the parameter value from the URL
   const urlParams = new URLSearchParams(window.location.search);
