@@ -16,9 +16,9 @@ const loader = document.querySelector("#loader");
 document.addEventListener("DOMContentLoaded", (event) => {
   alert('hello');
 //   getForecastData();
-  dummycall();
+//   dummycall();
 });
-
+getForecastData();
 function dummycall(){
   fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(res => res.json())
