@@ -24,7 +24,7 @@ function getForecastData() {
 
   // Make the API call with the parameter
   const apiUrl = "https://kr91cxm7k1.execute-api.us-east-2.amazonaws.com/Prod";
-  const requestUrl = `${apiUrl}?orgid=${encodeURIComponent(orgId)}`;
+  const requestUrl = `${apiUrl}?orgid=${encodeURIComponent('00D6g000002hN2pEAE')}`;
 
   // Send the GET request
   fetch(requestUrl)
