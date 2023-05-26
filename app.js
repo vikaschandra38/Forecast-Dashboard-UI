@@ -12,7 +12,7 @@ const overallForecast = document.querySelector(".overall-forecast");
 const forecastTable = document.getElementById("forecast-table-section");
 const content = document.querySelector(".content");
 const loader = document.querySelector("#loader");
-
+  alert('hello');
 document.addEventListener("DOMContentLoaded", (event) => {
   alert('hello');
 //   getForecastData();
