@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content none">
+        <header class="flex space-between p-20">
+            <h2>Forecast for Fiscal Quarter <span class="head-title"></span></span><strong>$<span
+                        class="overall-forecast">0</span></strong></h2>
+            <button class="button">
+                Print this Page
+            </button>
+        </header>
+
+        <section class="p-20">
+            <h3 class="mb-20">Forecast Breakdown</h3>
+            <div class="breakdown-cards flex space-between flex-wrap gap-10">
+                <div class="breakdown-card flex flex-column stretch space-between">
+                    <div class="title">Closed Won <i>&#x2139;</i></div>
+                    <div class="value fw-800">$<span class="ClosedForecast">0</span></div>
+                </div>
+                <div class="breakdown-card flex flex-column stretch space-between">
+                    <div class="title">Created <i>&#x2139;</i></div>
+                    <div class="value fw-800">$<span class="CreatedForecast">0</span></div>
+                </div>
+                <div class="breakdown-card flex flex-column stretch space-between">
+                    <div class="title">Pulled <i>&#x2139;</i></div>
+                    <div class="value fw-800">$<span class="PulledForecast">0</span></div>
+                </div>
+                <div class="breakdown-card flex flex-column stretch space-between">
+                    <div class="title">Forecasted <i>&#x2139;</i></div>
+                    <div class="value fw-800">$<span class="ForecastForecast">0</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-20">
+            <h3 class="mb-20">Forecast Insights</h3>
+            <div class="insight-cards flex space-between flex-wrap gap-10">
+                <div class="generic-card">
+                    <h4>Created</h4>
+                    <table class="created-table">
+                        <thead>
+                            <th>Min</th>
+                            <th>Avg</th>
+                            <th>Min</th>
+                            <th>Created</th>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                            <td>$ <span class="min">0</span></td>
+                            <td>$ <span class="avg">0</span></td>
+                            <td>$ <span class="max">0</span></td>
+                            <td><input type="text" class="fw-800" /></td>
+                        </tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="generic-card">
+                    <h4>Pulled</h4>
+                    <table class="pulled-table">
+                        <thead>
+                            <th>Min</th>
+                            <th>Avg</th>
+                            <th>Min</th>
+                            <th>Created</th>
+                        </thead>
+                        <tbody>
+                        <tbody>
+                            <td>$ <span class="min">0</span></td>
+                            <td>$ <span class="avg">0</span></td>
+                            <td>$ <span class="max">0</span></td>
+                            <td><input type="text" class="fw-800" /></td>
+                        </tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-20 generic-card">
+            <h4>Forecasted</h4>
+            <div id="forecast-table-section" class="overflow-auto"></div>
+        </section>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay">
+            <div class="overlay-content p-20 generic-card">
+                <div class="close-icon" id="closeIcon">&times;</div>
+                <h4 id="overlay-title">Overlay Content</h4>
+                <div class="overlay-table-container"></div>
+            </div>
+        </div>
+    </div>
+    <div id="loader"></div>
+    <script async defer src="app.js"></script>
+</body>
+
+</html>
